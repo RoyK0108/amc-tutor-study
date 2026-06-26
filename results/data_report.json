@@ -1,0 +1,44 @@
+{
+  "train": 12839,
+  "val": 534,
+  "removed": {
+    "dup": 10,
+    "contam:ngram13": 196,
+    "contam:jaccard": 2,
+    "contam:exact": 1
+  },
+  "by_source": {
+    "MATH": 5397,
+    "numina:synthetic_amc": 7533,
+    "numina:amc_aime": 443
+  },
+  "by_level": {
+    "5": 2197,
+    "null": 7976,
+    "3": 1549,
+    "4": 1651
+  },
+  "by_subject": {
+    "Algebra": 1207,
+    "null": 7976,
+    "Intermediate Algebra": 1046,
+    "Number Theory": 682,
+    "Prealgebra": 743,
+    "Counting & Probability": 572,
+    "Geometry": 664,
+    "Precalculus": 483
+  },
+  "eval_sizes": {
+    "amc": 83,
+    "aime": 90,
+    "math500": 500
+  },
+  "config": {
+    "out": "/Users/YNA/amc-tutor",
+    "levels": "3,4,5",
+    "numina": true,
+    "numina_cap": 8000,
+    "val_frac": 0.04,
+    "seed": 42
+  }
+}

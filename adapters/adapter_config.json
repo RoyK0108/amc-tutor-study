@@ -1,0 +1,50 @@
+{
+    "adapter_path": "/Users/YNA/amc-tutor/adapters",
+    "batch_size": 2,
+    "clear_cache_threshold": 0,
+    "config": "/Users/YNA/amc-tutor/configs/lora_qwen3_1.7b.yaml",
+    "data": "/Users/YNA/amc-tutor/data/mlx",
+    "fine_tune_type": "lora",
+    "grad_accumulation_steps": 4,
+    "grad_checkpoint": true,
+    "iters": 600,
+    "learning_rate": 0.0002,
+    "lora_parameters": {
+        "rank": 16,
+        "scale": 20.0,
+        "dropout": 0.05
+    },
+    "lr_schedule": {
+        "name": "cosine_decay",
+        "warmup": 60,
+        "warmup_init": 1e-06,
+        "arguments": [
+            0.0002,
+            600,
+            1e-05
+        ]
+    },
+    "mask_prompt": true,
+    "max_seq_length": 2048,
+    "model": "mlx-community/Qwen3-1.7B-4bit",
+    "num_layers": 16,
+    "optimizer": "adamw",
+    "optimizer_config": {
+        "adam": {},
+        "adamw": {},
+        "muon": {},
+        "sgd": {},
+        "adafactor": {}
+    },
+    "project_name": null,
+    "report_to": null,
+    "resume_adapter_file": null,
+    "save_every": 200,
+    "seed": 42,
+    "steps_per_eval": 150,
+    "steps_per_report": 20,
+    "test": false,
+    "test_batches": 500,
+    "train": true,
+    "val_batches": 25
+}

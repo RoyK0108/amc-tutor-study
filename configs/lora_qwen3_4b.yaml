@@ -1,0 +1,38 @@
+# QLoRA fine-tune of Qwen3-4B (4-bit) — the "stronger model" run.
+# 4B fits in ~6GB WITH grad-checkpointing (required: OOMs without it at seq 2048 batch 2).
+# Throttled on the fanless M4; checkpoints are frequent so we can pick best-by-val-loss.
+# Run: .venv/bin/mlx_lm.lora -c configs/lora_qwen3_4b.yaml
+
+model: "mlx-community/Qwen3-4B-4bit"
+train: true
+data: "/Users/YNA/amc-tutor/data/mlx"
+adapter_path: "/Users/YNA/amc-tutor/adapters_4b"
+
+fine_tune_type: lora
+optimizer: adamw
+num_layers: 16
+mask_prompt: true
+
+batch_size: 2
+grad_accumulation_steps: 4    # effective batch 8
+iters: 1300                   # ~0.5 epoch (finalized after speed smoke)
+max_seq_length: 2048
+grad_checkpoint: true         # required: 4B OOMs without it at seq 2048 batch 2
+
+learning_rate: 2.0e-4
+lr_schedule:
+  name: cosine_decay
+  warmup: 100
+  warmup_init: 1.0e-6
+  arguments: [2.0e-4, 1300, 1.0e-5]
+
+lora_parameters:
+  rank: 16
+  scale: 20.0
+  dropout: 0.05
+
+steps_per_report: 20
+steps_per_eval: 200
+val_batches: 25
+save_every: 200               # frequent checkpoints -> always have a usable adapter
+seed: 42

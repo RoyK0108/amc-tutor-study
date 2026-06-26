@@ -1,0 +1,38 @@
+# QLoRA fine-tune of Qwen3-1.7B (4-bit base) into an AMC competition-math tutor.
+# Right-sized for the fanless M4 Air (thermal-throttles to ~0.09 it/s): 600 iters
+# is plenty here — val loss drops from 1.63 to ~0.69 within the first ~250 iters.
+# Run: .venv/bin/mlx_lm.lora -c configs/lora_qwen3_1.7b.yaml
+
+model: "mlx-community/Qwen3-1.7B-4bit"
+train: true
+data: "/Users/YNA/amc-tutor/data/mlx"
+adapter_path: "/Users/YNA/amc-tutor/adapters"
+
+fine_tune_type: lora
+optimizer: adamw
+num_layers: 16
+mask_prompt: true         # loss only on the assistant solution
+
+batch_size: 2
+grad_accumulation_steps: 4   # effective batch size 8
+iters: 600                   # ~0.23 epoch; enough to fix format + shift style
+max_seq_length: 2048
+grad_checkpoint: true
+
+learning_rate: 2.0e-4
+lr_schedule:
+  name: cosine_decay
+  warmup: 60
+  warmup_init: 1.0e-6
+  arguments: [2.0e-4, 600, 1.0e-5]   # [peak_lr, decay_steps, end_lr]
+
+lora_parameters:
+  rank: 16
+  scale: 20.0
+  dropout: 0.05
+
+steps_per_report: 20
+steps_per_eval: 150       # val curve at 150/300/450/600
+val_batches: 25
+save_every: 200           # fallback checkpoints at 200/400/600
+seed: 42

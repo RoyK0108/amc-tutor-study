@@ -1,0 +1,63 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[1/5] Loading MATH train, levels=[3, 4, 5] ...
+      MATH records: 5582
+[1b ] Loading NuminaMath ({'synthetic_amc', 'amc_aime'}), cap=8000 ...
+Generating train split:   0%|          | 0/859494 [00:00<?, ? examples/s]Generating train split:   5%|▌         | 46000/859494 [00:00<00:01, 453733.65 examples/s]Generating train split:  11%|█▏        | 98000/859494 [00:00<00:01, 487069.35 examples/s]Generating train split:  17%|█▋        | 150000/859494 [00:00<00:01, 498711.04 examples/s]Generating train split:  26%|██▌       | 223899/859494 [00:00<00:01, 482378.90 examples/s]Generating train split:  32%|███▏      | 274899/859494 [00:00<00:01, 489517.21 examples/s]Generating train split:  38%|███▊      | 325899/859494 [00:00<00:01, 491973.40 examples/s]Generating train split:  46%|████▌     | 391798/859494 [00:00<00:00, 468790.63 examples/s]Generating train split:  51%|█████▏    | 441798/859494 [00:00<00:00, 475262.85 examples/s]Generating train split:  57%|█████▋    | 492798/859494 [00:01<00:00, 483188.50 examples/s]Generating train split:  66%|██████▌   | 565697/859494 [00:01<00:00, 466128.36 examples/s]Generating train split:  72%|███████▏  | 617697/859494 [00:01<00:00, 476763.89 examples/s]Generating train split:  78%|███████▊  | 666697/859494 [00:01<00:00, 477460.00 examples/s]Generating train split:  86%|████████▌ | 738596/859494 [00:01<00:00, 469672.67 examples/s]Generating train split:  92%|█████████▏| 787596/859494 [00:01<00:00, 472290.91 examples/s]Generating train split:  97%|█████████▋| 837596/859494 [00:01<00:00, 477683.54 examples/s]Generating train split: 100%|██████████| 859494/859494 [00:01<00:00, 479530.98 examples/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 33546.38 examples/s]
+filter numina sources:   0%|          | 0/859494 [00:00<?, ? examples/s]filter numina sources:   1%|          | 9000/859494 [00:00<00:10, 80127.39 examples/s]filter numina sources:   2%|▏         | 19000/859494 [00:00<00:09, 88162.07 examples/s]filter numina sources:   3%|▎         | 29000/859494 [00:00<00:09, 90765.80 examples/s]filter numina sources:   5%|▍         | 40000/859494 [00:00<00:10, 80425.38 examples/s]filter numina sources:   6%|▌         | 51000/859494 [00:00<00:09, 86914.03 examples/s]filter numina sources:   7%|▋         | 63000/859494 [00:00<00:08, 91886.09 examples/s]filter numina sources:   9%|▊         | 75000/859494 [00:00<00:08, 95206.40 examples/s]filter numina sources:  10%|▉         | 85000/859494 [00:00<00:08, 94323.11 examples/s]filter numina sources:  11%|█         | 95000/859494 [00:01<00:08, 94996.02 examples/s]filter numina sources:  12%|█▏        | 105000/859494 [00:01<00:07, 95853.35 examples/s]filter numina sources:  13%|█▎        | 115000/859494 [00:01<00:07, 96546.43 examples/s]filter numina sources:  15%|█▍        | 126000/859494 [00:01<00:07, 97522.61 examples/s]filter numina sources:  16%|█▌        | 139000/859494 [00:01<00:07, 91086.41 examples/s]filter numina sources:  17%|█▋        | 150000/859494 [00:01<00:07, 93658.77 examples/s]filter numina sources:  19%|█▊        | 160000/859494 [00:01<00:07, 94876.08 examples/s]filter numina sources:  20%|█▉        | 171000/859494 [00:01<00:07, 96570.42 examples/s]filter numina sources:  21%|██        | 182000/859494 [00:01<00:06, 97448.49 examples/s]filter numina sources:  22%|██▏       | 193000/859494 [00:02<00:06, 98300.62 examples/s]filter numina sources:  24%|██▎       | 204000/859494 [00:02<00:06, 98946.16 examples/s]filter numina sources:  25%|██▌       | 216000/859494 [00:02<00:06, 99824.67 examples/s]filter numina sources:  26%|██▋       | 227000/859494 [00:02<00:06, 99920.47 examples/s]filter numina sources:  28%|██▊       | 238000/859494 [00:02<00:06, 99922.24 examples/s]filter numina sources:  29%|██▉       | 250000/859494 [00:02<00:06, 100395.03 examples/s]filter numina sources:  30%|███       | 262000/859494 [00:02<00:05, 101069.94 examples/s]filter numina sources:  32%|███▏      | 274000/859494 [00:02<00:05, 101486.97 examples/s]filter numina sources:  33%|███▎      | 285000/859494 [00:02<00:05, 101059.14 examples/s]filter numina sources:  34%|███▍      | 296000/859494 [00:03<00:05, 100800.29 examples/s]filter numina sources:  36%|███▌      | 311000/859494 [00:03<00:05, 99678.24 examples/s] filter numina sources:  37%|███▋      | 322000/859494 [00:03<00:05, 99774.37 examples/s]filter numina sources:  39%|███▊      | 333000/859494 [00:03<00:05, 100448.53 examples/s]filter numina sources:  40%|████      | 345000/859494 [00:03<00:05, 101773.98 examples/s]filter numina sources:  42%|████▏     | 357000/859494 [00:03<00:04, 102511.24 examples/s]filter numina sources:  43%|████▎     | 369000/859494 [00:03<00:04, 103231.99 examples/s]filter numina sources:  44%|████▍     | 381000/859494 [00:03<00:04, 103547.36 examples/s]filter numina sources:  46%|████▌     | 393000/859494 [00:04<00:04, 103048.57 examples/s]filter numina sources:  48%|████▊     | 409000/859494 [00:04<00:04, 101209.01 examples/s]filter numina sources:  49%|████▉     | 421000/859494 [00:04<00:04, 101878.27 examples/s]filter numina sources:  51%|█████     | 435000/859494 [00:04<00:04, 94992.82 examples/s] filter numina sources:  52%|█████▏    | 446000/859494 [00:04<00:04, 96562.43 examples/s]filter numina sources:  53%|█████▎    | 458000/859494 [00:04<00:04, 98283.55 examples/s]filter numina sources:  55%|█████▍    | 469000/859494 [00:04<00:03, 99198.85 examples/s]filter numina sources:  56%|█████▌    | 481000/859494 [00:04<00:03, 100114.43 examples/s]filter numina sources:  57%|█████▋    | 493000/859494 [00:05<00:03, 100511.09 examples/s]filter numina sources:  59%|█████▉    | 505000/859494 [00:05<00:03, 101044.13 examples/s]filter numina sources:  60%|██████    | 517000/859494 [00:05<00:03, 102034.44 examples/s]filter numina sources:  61%|██████▏   | 528000/859494 [00:05<00:03, 101297.42 examples/s]filter numina sources:  63%|██████▎   | 539000/859494 [00:05<00:03, 100892.23 examples/s]filter numina sources:  64%|██████▍   | 551000/859494 [00:05<00:03, 101701.95 examples/s]filter numina sources:  66%|██████▌   | 563000/859494 [00:05<00:02, 102142.08 examples/s]filter numina sources:  67%|██████▋   | 575000/859494 [00:05<00:02, 102211.56 examples/s]filter numina sources:  68%|██████▊   | 587000/859494 [00:05<00:02, 102792.70 examples/s]filter numina sources:  70%|███████   | 603000/859494 [00:06<00:02, 101442.71 examples/s]filter numina sources:  72%|███████▏  | 616000/859494 [00:06<00:02, 94693.77 examples/s] filter numina sources:  73%|███████▎  | 627000/859494 [00:06<00:02, 96117.60 examples/s]filter numina sources:  74%|███████▍  | 638000/859494 [00:06<00:02, 97347.27 examples/s]filter numina sources:  76%|███████▌  | 649000/859494 [00:06<00:02, 98552.39 examples/s]filter numina sources:  77%|███████▋  | 661000/859494 [00:06<00:01, 99256.16 examples/s]filter numina sources:  78%|███████▊  | 673000/859494 [00:06<00:01, 99929.94 examples/s]filter numina sources:  80%|███████▉  | 685000/859494 [00:06<00:01, 101128.95 examples/s]filter numina sources:  81%|████████  | 696000/859494 [00:07<00:01, 100811.09 examples/s]filter numina sources:  82%|████████▏ | 708000/859494 [00:07<00:01, 100993.05 examples/s]filter numina sources:  84%|████████▍ | 720000/859494 [00:07<00:01, 101533.20 examples/s]filter numina sources:  85%|████████▌ | 734000/859494 [00:07<00:01, 94408.71 examples/s] filter numina sources:  87%|████████▋ | 744000/859494 [00:07<00:01, 95619.16 examples/s]filter numina sources:  88%|████████▊ | 756000/859494 [00:07<00:01, 97301.37 examples/s]filter numina sources:  89%|████████▉ | 768000/859494 [00:07<00:00, 98667.91 examples/s]filter numina sources:  91%|█████████ | 780000/859494 [00:07<00:00, 99849.10 examples/s]filter numina sources:  92%|█████████▏| 792000/859494 [00:08<00:00, 100581.79 examples/s]filter numina sources:  94%|█████████▎| 804000/859494 [00:08<00:00, 101103.09 examples/s]filter numina sources:  95%|█████████▍| 816000/859494 [00:08<00:00, 101295.03 examples/s]filter numina sources:  97%|█████████▋| 830000/859494 [00:08<00:00, 95633.76 examples/s] filter numina sources:  98%|█████████▊| 840000/859494 [00:08<00:00, 95765.38 examples/s]filter numina sources:  99%|█████████▉| 850000/859494 [00:08<00:00, 96092.52 examples/s]filter numina sources: 100%|██████████| 859494/859494 [00:08<00:00, 98233.60 examples/s]
+      NuminaMath records: 8000
+[2/5] Loading eval sets ...
+      amc: 83
+      aime: 90
+      math500: 500
+[3/5] Building contamination index from all eval problems ...
+[4/5] Decontaminating + dedup ...
+      kept 13373 / 13582  | removed {'dup': 10, 'contam:ngram13': 196, 'contam:jaccard': 2, 'contam:exact': 1}
+[5/5] Splitting + writing ...
+
+=== SUMMARY ===
+{
+  "train": 12839,
+  "val": 534,
+  "removed": {
+    "dup": 10,
+    "contam:ngram13": 196,
+    "contam:jaccard": 2,
+    "contam:exact": 1
+  },
+  "by_source": {
+    "MATH": 5397,
+    "numina:synthetic_amc": 7533,
+    "numina:amc_aime": 443
+  },
+  "by_level": {
+    "5": 2197,
+    "null": 7976,
+    "3": 1549,
+    "4": 1651
+  },
+  "by_subject": {
+    "Algebra": 1207,
+    "null": 7976,
+    "Intermediate Algebra": 1046,
+    "Number Theory": 682,
+    "Prealgebra": 743,
+    "Counting & Probability": 572,
+    "Geometry": 664,
+    "Precalculus": 483
+  },
+  "eval_sizes": {
+    "amc": 83,
+    "aime": 90,
+    "math500": 500
+  },
+  "config": {
+    "out": "/Users/YNA/amc-tutor",
+    "levels": "3,4,5",
+    "numina": true,
+    "numina_cap": 8000,
+    "val_frac": 0.04,
+    "seed": 42
+  }
+}
+=== NUMINA REBUILD + COPY DONE ===

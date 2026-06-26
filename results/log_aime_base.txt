@@ -1,0 +1,30 @@
+loading mlx-community/Qwen3-1.7B-4bit
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 48148.90it/s]
+  [10/90] acc=0.200 (253s, 25.3s/q)
+  [20/90] acc=0.100 (523s, 26.1s/q)
+  [30/90] acc=0.067 (754s, 25.1s/q)
+  [40/90] acc=0.075 (995s, 24.9s/q)
+  [50/90] acc=0.080 (1244s, 24.9s/q)
+  [60/90] acc=0.067 (1530s, 25.5s/q)
+  [70/90] acc=0.086 (1793s, 25.6s/q)
+  [80/90] acc=0.075 (2104s, 26.3s/q)
+  [90/90] acc=0.067 (2405s, 26.7s/q)
+
+=== RESULT ===
+{
+  "name": "aime_base_zeroshot",
+  "model": "mlx-community/Qwen3-1.7B-4bit",
+  "adapter": null,
+  "data": "/Users/YNA/amc-tutor/eval/aime.jsonl",
+  "n": 90,
+  "few_shot": 0,
+  "temp": 0.0,
+  "accuracy": 0.06666666666666667,
+  "ci95": [
+    0.022222222222222223,
+    0.12222222222222222
+  ],
+  "n_correct": 6,
+  "no_answer": 58,
+  "seconds": 2404.699432849884
+}

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+*.safetensors
+.DS_Store
+data/mlx/
+hf_dataset/data/

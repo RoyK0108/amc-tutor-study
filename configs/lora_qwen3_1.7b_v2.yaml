@@ -1,0 +1,38 @@
+# FIX attempt (v2): teach format/answer-extraction WITHOUT overwriting reasoning.
+# Changes vs v1 (which regressed): (a) reasoning-rich data (MATH + NuminaMath-CoT),
+# (b) gentler LR 1e-4 (was 2e-4), (c) frequent checkpoints to catch regression early.
+# Run: .venv/bin/mlx_lm.lora -c configs/lora_qwen3_1.7b_v2.yaml
+
+model: "mlx-community/Qwen3-1.7B-4bit"
+train: true
+data: "/Users/YNA/amc-tutor/data/mlx"          # rebuilt with --numina
+adapter_path: "/Users/YNA/amc-tutor/adapters_17b_v2"
+
+fine_tune_type: lora
+optimizer: adamw
+num_layers: 16
+mask_prompt: true
+
+batch_size: 2
+grad_accumulation_steps: 4
+iters: 800
+max_seq_length: 2048
+grad_checkpoint: true
+
+learning_rate: 1.0e-4
+lr_schedule:
+  name: cosine_decay
+  warmup: 80
+  warmup_init: 1.0e-6
+  arguments: [1.0e-4, 800, 1.0e-5]
+
+lora_parameters:
+  rank: 16
+  scale: 20.0
+  dropout: 0.05
+
+steps_per_report: 20
+steps_per_eval: 100
+val_batches: 25
+save_every: 100        # checkpoints every 100 iters -> spot-check accuracy early
+seed: 42
