@@ -100,8 +100,10 @@ approaches that *do* work in the literature — and the honest next steps — ar
    *working* reasoning instead of terse human shortcuts. (Compute-heavy; needs a real GPU at scale.)
 2. **RL with verifiable rewards (GRPO).** Optimize directly for answer-correctness. The DeepSeek-R1
    recipe; the principled way to *raise* reasoning rather than overwrite it.
-3. **Base + good prompting / more decoding budget.** The 4B base already gets 47% and loses ~21
-   problems purely to rambling past the token budget without boxing — recoverable *without* training.
+3. **Base + good prompting (verified ✅).** The 4B base loses ~21 AMC problems purely to rambling past
+   the token budget without boxing. A simple *concise-and-always-box* system prompt **eliminated all of
+   them (no-answers 21 → 0)** and moved AMC accuracy **47.0% → 51.8%** (+4.8 pts; CIs overlap on n=83) —
+   so **base + prompting beats every fine-tuning variant here, with zero training** (`--system` flag in `eval/evaluate.py`).
 
 For a strong small base on a hard reasoning task, **base + prompting ≥ naive SFT** — exactly the
 day-one prediction.

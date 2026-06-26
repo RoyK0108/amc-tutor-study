@@ -1,0 +1,30 @@
+loading mlx-community/Qwen3-4B-4bit
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 69136.88it/s]
+  [10/83] acc=0.700 (362s, 36.2s/q)
+  [20/83] acc=0.500 (729s, 36.4s/q)
+  [30/83] acc=0.467 (1002s, 33.4s/q)
+  [40/83] acc=0.475 (1400s, 35.0s/q)
+  [50/83] acc=0.480 (1779s, 35.6s/q)
+  [60/83] acc=0.517 (2211s, 36.8s/q)
+  [70/83] acc=0.543 (2548s, 36.4s/q)
+  [80/83] acc=0.537 (2848s, 35.6s/q)
+  [83/83] acc=0.518 (2943s, 35.5s/q)
+
+=== RESULT ===
+{
+  "name": "amc_base4b_concise",
+  "model": "mlx-community/Qwen3-4B-4bit",
+  "adapter": null,
+  "data": "/Users/YNA/amc-tutor/eval/amc.jsonl",
+  "n": 83,
+  "few_shot": 0,
+  "temp": 0.0,
+  "accuracy": 0.5180722891566265,
+  "ci95": [
+    0.40963855421686746,
+    0.6265060240963856
+  ],
+  "n_correct": 43,
+  "no_answer": 0,
+  "seconds": 2943.200267791748
+}
