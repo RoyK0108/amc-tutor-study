@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it."
+title: "AMC Tutor: a contamination-controlled study of QLoRA fine-tuning for AMC 10/12 math"
+authors:
+  - family-names: Kim
+    given-names: Roy
+date-released: 2026-06-25
+url: "https://github.com/RoyK0108/amc-tutor-study"
+license: MIT
+keywords:
+  - fine-tuning
+  - QLoRA
+  - competition-mathematics
+  - reasoning
+  - negative-result
+  - MLX
+abstract: >-
+  A reproducible, $0, local (MacBook M4 / MLX) study showing that naive QLoRA
+  supervised fine-tuning on open competition-math solutions degrades small-model
+  reasoning (Qwen3 1.7B and 4B) on a contamination-controlled AMC/AIME
+  evaluation, with root-cause analysis (style imitation suppresses reasoning;
+  validation loss masks it) and recommendations (self-distillation, GRPO,
+  base + prompting).

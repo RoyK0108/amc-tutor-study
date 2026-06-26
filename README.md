@@ -104,6 +104,10 @@ approaches that *do* work in the literature — and the honest next steps — ar
 For a strong small base on a hard reasoning task, **base + prompting ≥ naive SFT** — exactly the
 day-one prediction.
 
+**Phase 2 (ready to run):** [`notebooks/self_distillation_colab.ipynb`](notebooks/self_distillation_colab.ipynb)
+implements the self-distillation (STaR) fix on a free Colab GPU — sample the base's *own* solutions,
+keep the correct ones, fine-tune on those, and re-evaluate against these same baselines.
+
 ---
 
 ## Reproduce
