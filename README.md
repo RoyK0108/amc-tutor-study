@@ -4,6 +4,8 @@ A reproducible, **$0**, contamination-controlled study of QLoRA fine-tuning smal
 models (**Qwen3-1.7B** and **Qwen3-4B**) for AMC 10/12 competition math — run entirely
 **locally on a MacBook Air M4 (16 GB)** with [MLX](https://github.com/ml-explore/mlx).
 
+📦 **Dataset:** [Roykim7/amc-tutor-sft](https://huggingface.co/datasets/Roykim7/amc-tutor-sft)
+
 > **Headline (a negative result).** Naive supervised fine-tuning on open competition-math
 > solutions **degrades** the reasoning of both base sizes on held-out AMC — *robustly across
 > model size, dataset, and learning rate* — and standard **validation loss completely hides it**.
