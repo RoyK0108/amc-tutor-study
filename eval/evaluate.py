@@ -55,8 +55,8 @@ def load_fewshot(path, k, seed):
     return shots
 
 
-def build_prompt(tok, problem, shots):
-    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+def build_prompt(tok, problem, shots, system=SYSTEM_PROMPT):
+    messages = [{"role": "system", "content": system}]
     for u, a in shots:
         messages.append({"role": "user", "content": u})
         messages.append({"role": "assistant", "content": a})
@@ -82,6 +82,7 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out-dir", default="results")
+    ap.add_argument("--system", default=None, help="override the system prompt")
     args = ap.parse_args()
 
     rows = [json.loads(l) for l in open(args.data)]
@@ -97,7 +98,7 @@ def main():
     results, flags = [], []
     t0 = time.time()
     for i, r in enumerate(rows):
-        prompt = build_prompt(tok, r["problem"], shots)
+        prompt = build_prompt(tok, r["problem"], shots, system=args.system or SYSTEM_PROMPT)
         try:
             gen = generate(model, tok, prompt=prompt, max_tokens=args.max_tokens,
                            sampler=sampler, verbose=False)
